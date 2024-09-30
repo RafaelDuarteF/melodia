@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #212121;
+}
+main section.first-section {
+  width: 100vw;
+  height: 100vh;
+}
+main section.first-section img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+main section.first-section .infos-first-section {
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  z-index: 2; /* Aumenta o z-index */
+  position: relative; /* Adiciona um posicionamento relativo */
+}
+main section.first-section .infos-first-section h1, main section.first-section .infos-first-section span, main section.first-section .infos-first-section button {
+  align-self: flex-start;
+}
+main section.first-section .infos-first-section h1 {
+  color: #fff;
+  font-size: 50pt;
+  padding: 0;
+  margin: 0;
+}
+main section.first-section .infos-first-section span {
+  color: #9ca3af;
+  font-size: 21pt;
+}
+main section.first-section .infos-first-section button {
+  background-color: #09CC09;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16pt;
+  font-weight: bolder;
+  margin-top: 20px;
+  transition: all 0.25s;
+}
+main section.first-section .infos-first-section button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+header {
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  color: #fff;
+  align-items: center;
+  box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.3333333333);
+  z-index: 1;
+}
+header .logo-header {
+  position: absolute;
+  left: 12%;
+  width: 180px;
+}
+header nav {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  position: absolute;
+  right: 12%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 50px;
+}
+header nav ul li {
+  font-weight: 400;
+  font-size: 15pt;
+  transition: all 0.25s;
+}
+header nav ul li:hover {
+  cursor: pointer;
+  color: #09CC09;
+}
+
+/*# sourceMappingURL=default.css.map */

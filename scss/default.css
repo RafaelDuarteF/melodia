@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #212121;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #3498db;
+}
+header ul {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  list-style: none;
+}
+
+/*# sourceMappingURL=default.css.map */
