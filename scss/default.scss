@@ -14,14 +14,25 @@ $second-text-color: #9ca3af;
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: $second-color; /* Cor de fundo da seleção */
+    color: $primary-color; /* Cor do texto da seleção */
+}
+
+::-moz-selection { /* Para navegadores Firefox */
+    background-color: $second-color; /* Cor de fundo da seleção */
+    color: $primary-color; /* Cor do texto da seleção */
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: white;
+  overflow-x: hidden;
 }
 
 main {
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     overflow-x: hidden;
     background-color: $primary-color;
 
