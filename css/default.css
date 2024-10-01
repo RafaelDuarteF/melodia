@@ -275,4 +275,46 @@ header nav ul li:hover {
   color: #09CC09;
 }
 
+@media (max-width: 768px) {
+  section.second-section h2,
+  section.second-section p,
+  section.third-section h2,
+  section.third-section p {
+    width: 90%;
+    font-size: 24pt;
+  }
+  section.second-section img.image-section-2,
+  section.third-section .cards img {
+    width: 100%;
+  }
+  section.third-section .cards {
+    width: 100%;
+    padding: 10px 0;
+  }
+  section.third-section .card {
+    width: 80%;
+    margin: 10px 0;
+  }
+  section.third-section .card img {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  section.second-section h2 {
+    font-size: 20pt;
+  }
+  section.second-section p,
+  section.third-section h2,
+  section.third-section p {
+    font-size: 16pt;
+  }
+  section.third-section .cards {
+    flex-direction: column;
+  }
+  section.third-section .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
 /*# sourceMappingURL=default.css.map */

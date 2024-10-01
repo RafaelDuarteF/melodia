@@ -146,3 +146,54 @@ header {
     }
     
 }
+
+
+@media (max-width: 768px) {
+    section.second-section h2,
+    section.second-section p,
+    section.third-section h2,
+    section.third-section p {
+        width: 90%; // Aumenta a largura dos textos em telas menores
+        font-size: 24pt; // Reduz o tamanho da fonte do título
+    }
+
+    section.second-section img.image-section-2,
+    section.third-section .cards img {
+        width: 100%; // Faz as imagens ocuparem 100% da largura
+    }
+
+    section.third-section .cards {
+        width: 100%; // Faz o contêiner dos cards ocupar 100%
+        padding: 10px 0; // Ajusta o padding
+    }
+
+    section.third-section .card {
+        width: 80%; // Ajusta a largura dos cards para ocupar mais espaço
+        margin: 10px 0; // Espacemento vertical entre os cards
+    }
+
+    section.third-section .card img {
+        width: 80%; // Reduz a largura das imagens dentro dos cards
+    }
+}
+
+@media (max-width: 480px) {
+    section.second-section h2 {
+        font-size: 20pt; // Ajusta o tamanho da fonte para telas muito pequenas
+    }
+
+    section.second-section p,
+    section.third-section h2,
+    section.third-section p {
+        font-size: 16pt; // Ajusta ainda mais o tamanho da fonte
+    }
+
+    section.third-section .cards {
+        flex-direction: column; // Muda os cards para coluna em telas muito pequenas
+    }
+
+    section.third-section .card {
+        width: 100%; // Cada card ocupará 100% da largura do contêiner
+        margin: 10px 0; // Espaçamento vertical
+    }
+}
