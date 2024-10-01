@@ -5,6 +5,9 @@ $primary-color: #212121;
 $second-color: #09CC09;
 $header-color: #00000055;
 
+$scroll-background: #121212;
+$scroll-hover: #068306;
+
 $primary-text-color: #fff;
 $second-text-color: #9ca3af;
 
@@ -12,6 +15,27 @@ $second-text-color: #9ca3af;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Estilo geral da scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da scrollbar */
+}
+
+/* Fundo da scrollbar */
+::-webkit-scrollbar-track {
+    background: $scroll-background; /* Cor de fundo do track */
+}
+
+/* Cor do "thumb" (parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background: $second-color; /* Cor do thumb */
+    border-radius: 6px; /* Cantos arredondados */
+}
+
+/* Cor do "thumb" ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: $scroll-hover;
 }
 
 ::selection {
