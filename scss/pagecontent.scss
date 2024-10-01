@@ -1,0 +1,157 @@
+section.second-section, section.third-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-top: 50px;
+
+    h2 {
+        color: $primary-text-color;
+        font-size: 40pt;
+        width: 60%;
+        text-align: center;
+        margin: 0;
+        padding: 0; 
+    }
+    p {
+        color: $second-text-color;
+        font-size: 18pt;
+        text-align: center;
+        width: 60%;
+        font-weight: 400;
+        margin-top: 30px;
+    }
+
+    img.image-section-2 {
+        width: 100%;
+        margin-top: 60px;
+    }
+}
+
+section.third-section {
+    margin-top: 80px;
+
+    .cards {
+        width: 90%; // Define a largura total do contêiner
+        max-width: 100%; // Limita a largura
+        margin-top: 80px;
+        height: auto;
+        padding: 20px 0px;
+        overflow-x: auto; // Permite scroll horizontal
+        overflow-y: auto; // Esconde qualquer scroll vertical
+        display: flex;
+        flex-wrap: nowrap; // Impede que os cards quebrem a linha
+        scrollbar-width: none; // Para Firefox (oculta a barra de rolagem)
+
+        &::-webkit-scrollbar {
+            display: none; // Esconder a barra de rolagem
+        }
+
+        .card {
+            width: 25%; // Largura dos cards
+            margin-right: 20px; // Espaçamento entre os cards
+            flex-shrink: 0; // Impede que o card encolha
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+            border-radius: 30px;
+            position: relative; // Para que o position: absolute funcione na infos-card
+
+            img {
+                width: 75%;
+            }
+        
+            .infos-card {
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                
+                backdrop-filter: blur(5px);
+                opacity: 95%;
+                padding: 10px;
+                border-radius: 30px;
+
+                h3, p {
+                    text-align: left;
+                }
+        
+                h3 {
+                    font-size: 14pt;
+                    margin: 0;
+                    color: $primary-text-color;
+                    width: 100%;
+                    padding: 0px 15px;
+                    padding-top: 15px;
+                }
+        
+                p {
+                    font-size: 12pt;
+                    color: $second-text-color;
+                    margin: 0;
+                    width: 90%;
+                    padding: 0px 15px;
+                    padding-bottom: 15px;
+                }
+
+                
+            }
+            transition: all 0.25s;
+
+            &:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+
+        // Gradientes para os cards
+        .card1 {
+            background: linear-gradient(to bottom, #a30953, #670d76);
+            .infos-card {
+                background-color: #670d76;
+                box-shadow: 0 -15px 20px #670d76;
+            }
+        }
+
+        .card2 {
+            background: linear-gradient(to bottom, #b92020, #8d0000);
+            .infos-card {
+                background-color: #8d0000;
+                box-shadow: 0 -15px 20px #8d0000;
+            }
+        }
+
+        .card3 {
+            background: linear-gradient(to bottom, #1f968f, #026c53);
+            .infos-card {
+                background-color: #026c53;
+                box-shadow: 0 -15px 20px #026c53;
+            }
+        }
+
+        .card4 {
+            background: linear-gradient(to bottom, #074cb4, #024d6c);
+            .infos-card {
+                background-color: #024d6c;
+                box-shadow: 0 -15px 20px #024d6c;
+            }
+        }
+
+        .card5 {
+            background: linear-gradient(to bottom, #a30953, #670d76);
+            .infos-card {
+                background-color: #670d76;
+                box-shadow: 0 -15px 20px #670d76;
+            }
+        }
+
+        .card6 {
+            background: linear-gradient(to bottom, #b92020, #8d0000);
+            .infos-card {
+                background-color: #8d0000;
+                box-shadow: 0 -15px 20px #8d0000;
+            }
+        }
+    }
+}

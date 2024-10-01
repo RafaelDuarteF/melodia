@@ -1,5 +1,142 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+section.second-section, section.third-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding-top: 50px;
+}
+section.second-section h2, section.third-section h2 {
+  color: #fff;
+  font-size: 40pt;
+  width: 60%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+section.second-section p, section.third-section p {
+  color: #9ca3af;
+  font-size: 18pt;
+  text-align: center;
+  width: 60%;
+  font-weight: 400;
+  margin-top: 30px;
+}
+section.second-section img.image-section-2, section.third-section img.image-section-2 {
+  width: 100%;
+  margin-top: 60px;
+}
+
+section.third-section {
+  margin-top: 80px;
+}
+section.third-section .cards {
+  width: 90%;
+  max-width: 100%;
+  margin-top: 80px;
+  height: auto;
+  padding: 20px 0px;
+  overflow-x: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+}
+section.third-section .cards::-webkit-scrollbar {
+  display: none;
+}
+section.third-section .cards .card {
+  width: 25%;
+  margin-right: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.25s;
+}
+section.third-section .cards .card img {
+  width: 75%;
+}
+section.third-section .cards .card .infos-card {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  backdrop-filter: blur(5px);
+  opacity: 95%;
+  padding: 10px;
+  border-radius: 30px;
+}
+section.third-section .cards .card .infos-card h3, section.third-section .cards .card .infos-card p {
+  text-align: left;
+}
+section.third-section .cards .card .infos-card h3 {
+  font-size: 14pt;
+  margin: 0;
+  color: #fff;
+  width: 100%;
+  padding: 0px 15px;
+  padding-top: 15px;
+}
+section.third-section .cards .card .infos-card p {
+  font-size: 12pt;
+  color: #9ca3af;
+  margin: 0;
+  width: 90%;
+  padding: 0px 15px;
+  padding-bottom: 15px;
+}
+section.third-section .cards .card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+section.third-section .cards .card1 {
+  background: linear-gradient(to bottom, #a30953, #670d76);
+}
+section.third-section .cards .card1 .infos-card {
+  background-color: #670d76;
+  box-shadow: 0 -15px 20px #670d76;
+}
+section.third-section .cards .card2 {
+  background: linear-gradient(to bottom, #b92020, #8d0000);
+}
+section.third-section .cards .card2 .infos-card {
+  background-color: #8d0000;
+  box-shadow: 0 -15px 20px #8d0000;
+}
+section.third-section .cards .card3 {
+  background: linear-gradient(to bottom, #1f968f, #026c53);
+}
+section.third-section .cards .card3 .infos-card {
+  background-color: #026c53;
+  box-shadow: 0 -15px 20px #026c53;
+}
+section.third-section .cards .card4 {
+  background: linear-gradient(to bottom, #074cb4, #024d6c);
+}
+section.third-section .cards .card4 .infos-card {
+  background-color: #024d6c;
+  box-shadow: 0 -15px 20px #024d6c;
+}
+section.third-section .cards .card5 {
+  background: linear-gradient(to bottom, #a30953, #670d76);
+}
+section.third-section .cards .card5 .infos-card {
+  background-color: #670d76;
+  box-shadow: 0 -15px 20px #670d76;
+}
+section.third-section .cards .card6 {
+  background: linear-gradient(to bottom, #b92020, #8d0000);
+}
+section.third-section .cards .card6 .infos-card {
+  background-color: #8d0000;
+  box-shadow: 0 -15px 20px #8d0000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,12 +166,12 @@
 
 ::selection {
   background-color: #09CC09; /* Cor de fundo da seleção */
-  color: #212121; /* Cor do texto da seleção */
+  color: #121116; /* Cor do texto da seleção */
 }
 
 ::-moz-selection { /* Para navegadores Firefox */
   background-color: #09CC09; /* Cor de fundo da seleção */
-  color: #212121; /* Cor do texto da seleção */
+  color: #121116; /* Cor do texto da seleção */
 }
 
 body {
@@ -45,9 +182,8 @@ body {
 
 main {
   width: 100vw;
-  height: 200vh;
   overflow-x: hidden;
-  background-color: #212121;
+  background-color: #121116;
 }
 main section.first-section {
   width: 100vw;
@@ -111,7 +247,7 @@ header {
 }
 header .logo-header {
   position: absolute;
-  left: 12%;
+  left: 10%;
   width: 180px;
 }
 header nav {
@@ -123,7 +259,7 @@ header nav {
 header nav ul {
   display: flex;
   position: absolute;
-  right: 12%;
+  right: 10%;
   margin: 0;
   padding: 0;
   list-style: none;

@@ -1,15 +1,8 @@
 // scss/styles.scss
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$primary-color: #212121;
-$second-color: #09CC09;
-$header-color: #00000055;
-
-$scroll-background: #121212;
-$scroll-hover: #068306;
-
-$primary-text-color: #fff;
-$second-text-color: #9ca3af;
+@import '_variables.scss';
+@import 'pagecontent.scss';
 
 * {
     margin: 0;
@@ -56,7 +49,6 @@ body {
 
 main {
     width: 100vw;
-    height: 200vh;
     overflow-x: hidden;
     background-color: $primary-color;
 
@@ -125,7 +117,7 @@ header {
 
     .logo-header {
         position: absolute;
-        left: 12%;
+        left: 10%;
         width: 180px;
     }
     nav {
@@ -136,7 +128,7 @@ header {
         ul {
             display: flex;
             position: absolute;
-            right: 12%;
+            right: 10%;
             margin: 0;
             padding: 0;
             list-style: none;
