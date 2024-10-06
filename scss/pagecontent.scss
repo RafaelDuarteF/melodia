@@ -155,3 +155,56 @@ section.third-section {
         }
     }
 }
+
+.contact-section {
+    background-color: #121212;
+
+    h2 {
+        color: #00ff99; // Destaque verde para o título
+        font-size: 2.5rem;
+    }
+
+    p {
+        color: #808080;
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        .form-control {
+            font-size: 1rem;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            font-family: 'Rhodium Libre', sans-serif;
+            resize: none;
+
+            &::placeholder {
+                color: #bbb;
+            }
+
+            &:focus {
+                background-color: #444;
+                outline: none;
+                box-shadow: 0 0 0 0.25rem rgba(0, 255, 153, 0.25);
+            }
+        }
+
+        .btn-custom {
+            background-color: #00ff99;
+            color: #121212;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 40px;
+            transition: 0.25s;
+
+            &:hover {
+                background-color: lighten(#00ff99, 10%);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
