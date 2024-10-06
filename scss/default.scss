@@ -10,35 +10,31 @@
     box-sizing: border-box;
 }
 
-/* Estilo geral da scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; /* Largura da scrollbar */
+    width: 8px; 
 }
 
-/* Fundo da scrollbar */
 ::-webkit-scrollbar-track {
-    background: $scroll-background; /* Cor de fundo do track */
+    background: $scroll-background;
 }
 
-/* Cor do "thumb" (parte que você arrasta) */
 ::-webkit-scrollbar-thumb {
-    background: $second-color; /* Cor do thumb */
-    border-radius: 6px; /* Cantos arredondados */
+    background: $second-color;
+    border-radius: 6px;
 }
 
-/* Cor do "thumb" ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
     background-color: $scroll-hover;
 }
 
 ::selection {
-    background-color: $second-color; /* Cor de fundo da seleção */
-    color: $primary-color; /* Cor do texto da seleção */
+    background-color: $second-color;
+    color: $primary-color;
 }
 
-::-moz-selection { /* Para navegadores Firefox */
-    background-color: $second-color; /* Cor de fundo da seleção */
-    color: $primary-color; /* Cor do texto da seleção */
+::-moz-selection {
+    background-color: $second-color;
+    color: $primary-color;
 }
 
 body {
@@ -144,56 +140,191 @@ header {
             }
         }
     }
+
+    @media (max-width: 768px) {
+
+        img.logo-header {
+            display: none; // Esconde a imagem do logo no mobile
+        }
+
+        nav {
+            flex: 1; // Expande a navegação para ocupar o espaço
+            justify-content: center; // Centraliza a navegação no espaço restante
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0px 30px;
+                gap: 20px;
+                width: 100%;
+                right: 0;
+            }
+        
+        }
+       
+    }
+    
     
 }
 
+.footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 40px 0;
 
-@media (max-width: 768px) {
-    section.second-section h2,
-    section.second-section p,
-    section.third-section h2,
-    section.third-section p {
-        width: 90%; // Aumenta a largura dos textos em telas menores
-        font-size: 24pt; // Reduz o tamanho da fonte do título
+    .footer-top {
+        text-align: center;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap; // Permite quebra de linha em telas menores
+
+            a img {
+                width: 150px;
+
+                @media (max-width: 768px) {
+                    width: 120px;
+                }
+
+                @media (max-width: 480px) {
+                    width: 100px;
+                }
+            }
+        }
     }
 
-    section.second-section img.image-section-2,
-    section.third-section .cards img {
-        width: 100%; // Faz as imagens ocuparem 100% da largura
+    .footer-middle {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 20px;
+
+        .column {
+            h4 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5%;
+
+            .download-button {
+                background-color: #32a852;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 16px;
+
+                &:hover {
+                    background-color: #28a745;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .column {
+                margin-bottom: 20px; // Espaçamento entre as colunas
+            }
+        }
     }
 
-    section.third-section .cards {
-        width: 100%; // Faz o contêiner dos cards ocupar 100%
-        padding: 10px 0; // Ajusta o padding
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #333;
+
+        p {
+            margin: 5px 0;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; // Ajuste para ícones ficarem em várias linhas em telas pequenas
+
+            a .fa-brands {
+                color: #fff;
+                font-size: 2rem;
+                margin: 10px;
+
+                @media (max-width: 480px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 
-    section.third-section .card {
-        width: 80%; // Ajusta a largura dos cards para ocupar mais espaço
-        margin: 10px 0; // Espacemento vertical entre os cards
+    @media (max-width: 768px) {
+        padding: 20px 0;
+
+        .footer-top h2 {
+            font-size: 20px;
+        }
+
+        .footer-top p {
+            font-size: 14px;
+        }
     }
 
-    section.third-section .card img {
-        width: 80%; // Reduz a largura das imagens dentro dos cards
+    @media (max-width: 480px) {
+        .footer-top h2 {
+            font-size: 18px;
+        }
+
+        .footer-top p {
+            font-size: 12px;
+        }
     }
 }
 
-@media (max-width: 480px) {
-    section.second-section h2 {
-        font-size: 20pt; // Ajusta o tamanho da fonte para telas muito pequenas
-    }
 
-    section.second-section p,
-    section.third-section h2,
-    section.third-section p {
-        font-size: 16pt; // Ajusta ainda mais o tamanho da fonte
-    }
-
-    section.third-section .cards {
-        flex-direction: column; // Muda os cards para coluna em telas muito pequenas
-    }
-
-    section.third-section .card {
-        width: 100%; // Cada card ocupará 100% da largura do contêiner
-        margin: 10px 0; // Espaçamento vertical
-    }
-}

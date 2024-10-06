@@ -35,20 +35,27 @@ section.third-section img.image-section-2 {
 section.third-section {
   margin-top: 80px;
 }
+section.third-section .cards::-webkit-scrollbar {
+  height: 8px; /* Largura da barra de rolagem no eixo X para Webkit */
+}
+section.third-section .cards::-webkit-scrollbar-thumb {
+  background-color: #09CC09; /* Cor da barra de rolagem */
+  border-radius: 10px; /* Deixa a barra com bordas arredondadas */
+}
+section.third-section .cards::-webkit-scrollbar-track {
+  background: transparent; /* Fundo da barra de rolagem */
+}
 section.third-section .cards {
   width: 90%;
   max-width: 100%;
   margin-top: 80px;
   height: auto;
   padding: 20px 0px;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: auto;
   display: flex;
   flex-wrap: nowrap;
-  scrollbar-width: none;
-}
-section.third-section .cards::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: 5px;
 }
 section.third-section .cards .card {
   width: 25%;
@@ -142,6 +149,56 @@ section.third-section .cards .card6 .infos-card {
   box-shadow: 0 -15px 20px #8d0000;
 }
 
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+  section.first-section .infos-first-section {
+    width: 100vw !important;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  section.first-section .infos-first-section h1 {
+    font-size: 40pt !important;
+  }
+  section.second-section h2,
+  section.third-section h2 {
+    font-size: 28pt;
+    width: 90%;
+  }
+  section.second-section p,
+  section.third-section p {
+    font-size: 14pt;
+    width: 90%;
+  }
+  section.third-section .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section.third-section .cards .card {
+    width: 90% !important;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  section.third-section .cards .infos-card h3 {
+    font-size: 12pt;
+  }
+  section.third-section .cards .infos-card p {
+    font-size: 10pt;
+  }
+}
+/* Media Query para telas menores que 480px */
+@media (max-width: 480px) {
+  section.second-section h2,
+  section.third-section h2 {
+    font-size: 20pt;
+  }
+  section.second-section p,
+  section.third-section p {
+    font-size: 12pt;
+  }
+  section.third-section .cards .card {
+    width: 100%;
+  }
+}
 .contact-section {
   background-color: #121212;
 }
@@ -150,7 +207,7 @@ section.third-section .cards .card6 .infos-card {
   font-size: 2.5rem;
 }
 .contact-section p {
-  color: #808080;
+  color: #9ca3af;
   font-size: 1.2rem;
 }
 .contact-section .contact-form .form-control {
@@ -172,8 +229,8 @@ section.third-section .cards .card6 .infos-card {
   box-shadow: 0 0 0 0.25rem rgba(0, 255, 153, 0.25);
 }
 .contact-section .contact-form .btn-custom {
-  background-color: #00ff99;
-  color: #121212;
+  background-color: #09CC09;
+  color: #121116;
   font-size: 1.1rem;
   font-weight: bold;
   padding: 0.75rem;
@@ -182,8 +239,160 @@ section.third-section .cards .card6 .infos-card {
   transition: 0.25s;
 }
 .contact-section .contact-form .btn-custom:hover {
-  background-color: rgb(51, 255, 173.4);
+  background-color: rgb(19.3943661972, 244.6056338028, 19.3943661972);
   transform: scale(1.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #09CC09;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #068306;
+}
+
+::selection {
+  background-color: #09CC09;
+  color: #121116;
+}
+
+::-moz-selection {
+  background-color: #09CC09;
+  color: #121116;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #121116;
+}
+main section.first-section {
+  width: 100vw;
+  height: 100vh;
+}
+main section.first-section img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+main section.first-section .infos-first-section {
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  z-index: 2; /* Aumenta o z-index */
+  position: relative; /* Adiciona um posicionamento relativo */
+}
+main section.first-section .infos-first-section h1, main section.first-section .infos-first-section span, main section.first-section .infos-first-section button {
+  align-self: flex-start;
+}
+main section.first-section .infos-first-section h1 {
+  color: #fff;
+  font-size: 50pt;
+  padding: 0;
+  margin: 0;
+}
+main section.first-section .infos-first-section span {
+  color: #9ca3af;
+  font-size: 21pt;
+}
+main section.first-section .infos-first-section button {
+  background-color: #09CC09;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16pt;
+  font-weight: bolder;
+  margin-top: 20px;
+  transition: all 0.25s;
+}
+main section.first-section .infos-first-section button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+header {
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  color: #fff;
+  align-items: center;
+  box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.3333333333);
+  z-index: 1;
+}
+header .logo-header {
+  position: absolute;
+  left: 10%;
+  width: 180px;
+}
+header nav {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  position: absolute;
+  right: 10%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 50px;
+}
+header nav ul li {
+  font-weight: 400;
+  font-size: 15pt;
+  transition: all 0.25s;
+}
+header nav ul li:hover {
+  cursor: pointer;
+  color: #09CC09;
+}
+@media (max-width: 768px) {
+  header img.logo-header {
+    display: none;
+  }
+  header nav {
+    flex: 1;
+    justify-content: center;
+  }
+  header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+    gap: 20px;
+    width: 100%;
+    right: 0;
+  }
 }
 
 .footer {
@@ -320,186 +529,6 @@ section.third-section .cards .card6 .infos-card {
   }
   .footer .footer-top p {
     font-size: 12px;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilo geral da scrollbar */
-::-webkit-scrollbar {
-  width: 8px; /* Largura da scrollbar */
-}
-
-/* Fundo da scrollbar */
-::-webkit-scrollbar-track {
-  background: #121212; /* Cor de fundo do track */
-}
-
-/* Cor do "thumb" (parte que você arrasta) */
-::-webkit-scrollbar-thumb {
-  background: #09CC09; /* Cor do thumb */
-  border-radius: 6px; /* Cantos arredondados */
-}
-
-/* Cor do "thumb" ao passar o mouse */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #068306;
-}
-
-::selection {
-  background-color: #09CC09; /* Cor de fundo da seleção */
-  color: #121116; /* Cor do texto da seleção */
-}
-
-::-moz-selection { /* Para navegadores Firefox */
-  background-color: #09CC09; /* Cor de fundo da seleção */
-  color: #121116; /* Cor do texto da seleção */
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  overflow-x: hidden;
-}
-
-main {
-  width: 100vw;
-  overflow-x: hidden;
-  background-color: #121116;
-}
-main section.first-section {
-  width: 100vw;
-  height: 100vh;
-}
-main section.first-section img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-main section.first-section .infos-first-section {
-  width: 60vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-left: 10%;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-  z-index: 2; /* Aumenta o z-index */
-  position: relative; /* Adiciona um posicionamento relativo */
-}
-main section.first-section .infos-first-section h1, main section.first-section .infos-first-section span, main section.first-section .infos-first-section button {
-  align-self: flex-start;
-}
-main section.first-section .infos-first-section h1 {
-  color: #fff;
-  font-size: 50pt;
-  padding: 0;
-  margin: 0;
-}
-main section.first-section .infos-first-section span {
-  color: #9ca3af;
-  font-size: 21pt;
-}
-main section.first-section .infos-first-section button {
-  background-color: #09CC09;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 16pt;
-  font-weight: bolder;
-  margin-top: 20px;
-  transition: all 0.25s;
-}
-main section.first-section .infos-first-section button:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-header {
-  width: 100vw;
-  height: 70px;
-  position: fixed;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.3333333333);
-  color: #fff;
-  align-items: center;
-  box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.3333333333);
-  z-index: 1;
-}
-header .logo-header {
-  position: absolute;
-  left: 10%;
-  width: 180px;
-}
-header nav {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-header nav ul {
-  display: flex;
-  position: absolute;
-  right: 10%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  gap: 50px;
-}
-header nav ul li {
-  font-weight: 400;
-  font-size: 15pt;
-  transition: all 0.25s;
-}
-header nav ul li:hover {
-  cursor: pointer;
-  color: #09CC09;
-}
-
-@media (max-width: 768px) {
-  section.second-section h2,
-  section.second-section p,
-  section.third-section h2,
-  section.third-section p {
-    width: 90%;
-    font-size: 24pt;
-  }
-  section.second-section img.image-section-2,
-  section.third-section .cards img {
-    width: 100%;
-  }
-  section.third-section .cards {
-    width: 100%;
-    padding: 10px 0;
-  }
-  section.third-section .card {
-    width: 80%;
-    margin: 10px 0;
-  }
-  section.third-section .card img {
-    width: 80%;
-  }
-}
-@media (max-width: 480px) {
-  section.second-section h2 {
-    font-size: 20pt;
-  }
-  section.second-section p,
-  section.third-section h2,
-  section.third-section p {
-    font-size: 16pt;
-  }
-  section.third-section .cards {
-    flex-direction: column;
-  }
-  section.third-section .card {
-    width: 100%;
-    margin: 10px 0;
   }
 }
 
