@@ -1,4 +1,5 @@
-section.second-section, section.third-section {
+section.second-section,
+section.third-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,8 +12,9 @@ section.second-section, section.third-section {
         width: 60%;
         text-align: center;
         margin: 0;
-        padding: 0; 
+        padding: 0;
     }
+
     p {
         color: $second-text-color;
         font-size: 18pt;
@@ -62,21 +64,22 @@ section.third-section {
             img {
                 width: 75%;
             }
-        
+
             .infos-card {
                 width: 100%;
                 position: absolute;
                 bottom: 0px;
-                
+
                 backdrop-filter: blur(5px);
                 opacity: 95%;
                 padding: 10px;
                 border-radius: 30px;
 
-                h3, p {
+                h3,
+                p {
                     text-align: left;
                 }
-        
+
                 h3 {
                     font-size: 14pt;
                     margin: 0;
@@ -85,7 +88,7 @@ section.third-section {
                     padding: 0px 15px;
                     padding-top: 15px;
                 }
-        
+
                 p {
                     font-size: 12pt;
                     color: $second-text-color;
@@ -95,8 +98,9 @@ section.third-section {
                     padding-bottom: 15px;
                 }
 
-                
+
             }
+
             transition: all 0.25s;
 
             &:hover {
@@ -108,6 +112,7 @@ section.third-section {
         // Gradientes para os cards
         .card1 {
             background: linear-gradient(to bottom, #a30953, #670d76);
+
             .infos-card {
                 background-color: #670d76;
                 box-shadow: 0 -15px 20px #670d76;
@@ -116,6 +121,7 @@ section.third-section {
 
         .card2 {
             background: linear-gradient(to bottom, #b92020, #8d0000);
+
             .infos-card {
                 background-color: #8d0000;
                 box-shadow: 0 -15px 20px #8d0000;
@@ -124,6 +130,7 @@ section.third-section {
 
         .card3 {
             background: linear-gradient(to bottom, #1f968f, #026c53);
+
             .infos-card {
                 background-color: #026c53;
                 box-shadow: 0 -15px 20px #026c53;
@@ -132,6 +139,7 @@ section.third-section {
 
         .card4 {
             background: linear-gradient(to bottom, #074cb4, #024d6c);
+
             .infos-card {
                 background-color: #024d6c;
                 box-shadow: 0 -15px 20px #024d6c;
@@ -140,6 +148,7 @@ section.third-section {
 
         .card5 {
             background: linear-gradient(to bottom, #a30953, #670d76);
+
             .infos-card {
                 background-color: #670d76;
                 box-shadow: 0 -15px 20px #670d76;
@@ -148,10 +157,172 @@ section.third-section {
 
         .card6 {
             background: linear-gradient(to bottom, #b92020, #8d0000);
+
             .infos-card {
                 background-color: #8d0000;
                 box-shadow: 0 -15px 20px #8d0000;
             }
+        }
+    }
+}
+
+
+.footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 40px 0;
+
+    .footer-top {
+        text-align: center;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap; // Permite quebra de linha em telas menores
+
+            a img {
+                width: 150px;
+
+                @media (max-width: 768px) {
+                    width: 120px;
+                }
+
+                @media (max-width: 480px) {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .footer-middle {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 20px;
+
+        .column {
+            h4 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5%;
+
+            .download-button {
+                background-color: #32a852;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 16px;
+
+                &:hover {
+                    background-color: #28a745;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .column {
+                margin-bottom: 20px; // Espaçamento entre as colunas
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #333;
+
+        p {
+            margin: 5px 0;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; // Ajuste para ícones ficarem em várias linhas em telas pequenas
+
+            a .fa-brands {
+                color: #fff;
+                font-size: 2rem;
+                margin: 10px;
+
+                @media (max-width: 480px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px 0;
+
+        .footer-top h2 {
+            font-size: 20px;
+        }
+
+        .footer-top p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .footer-top h2 {
+            font-size: 18px;
+        }
+
+        .footer-top p {
+            font-size: 12px;
         }
     }
 }

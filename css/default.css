@@ -1,13 +1,15 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-section.second-section, section.third-section {
+section.second-section,
+section.third-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
   padding-top: 50px;
 }
-section.second-section h2, section.third-section h2 {
+section.second-section h2,
+section.third-section h2 {
   color: #fff;
   font-size: 40pt;
   width: 60%;
@@ -15,7 +17,8 @@ section.second-section h2, section.third-section h2 {
   margin: 0;
   padding: 0;
 }
-section.second-section p, section.third-section p {
+section.second-section p,
+section.third-section p {
   color: #9ca3af;
   font-size: 18pt;
   text-align: center;
@@ -23,7 +26,8 @@ section.second-section p, section.third-section p {
   font-weight: 400;
   margin-top: 30px;
 }
-section.second-section img.image-section-2, section.third-section img.image-section-2 {
+section.second-section img.image-section-2,
+section.third-section img.image-section-2 {
   width: 100%;
   margin-top: 60px;
 }
@@ -71,7 +75,8 @@ section.third-section .cards .card .infos-card {
   padding: 10px;
   border-radius: 30px;
 }
-section.third-section .cards .card .infos-card h3, section.third-section .cards .card .infos-card p {
+section.third-section .cards .card .infos-card h3,
+section.third-section .cards .card .infos-card p {
   text-align: left;
 }
 section.third-section .cards .card .infos-card h3 {
@@ -135,6 +140,143 @@ section.third-section .cards .card6 {
 section.third-section .cards .card6 .infos-card {
   background-color: #8d0000;
   box-shadow: 0 -15px 20px #8d0000;
+}
+
+.footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 40px 0;
+}
+.footer .footer-top {
+  text-align: center;
+}
+.footer .footer-top h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.footer .footer-top p {
+  margin-bottom: 20px;
+}
+.footer .footer-top .store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.footer .footer-top .store-buttons a img {
+  width: 150px;
+}
+@media (max-width: 768px) {
+  .footer .footer-top .store-buttons a img {
+    width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .footer .footer-top .store-buttons a img {
+    width: 100px;
+  }
+}
+.footer .footer-middle {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+.footer .footer-middle .column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.footer .footer-middle .column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer-middle .column ul li {
+  margin-bottom: 10px;
+}
+.footer .footer-middle .column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-middle .column ul li a:hover {
+  text-decoration: underline;
+}
+.footer .footer-middle .cta-button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5%;
+}
+.footer .footer-middle .cta-button .download-button {
+  background-color: #32a852;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.footer .footer-middle .cta-button .download-button:hover {
+  background-color: #28a745;
+}
+@media (max-width: 768px) {
+  .footer .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .footer-middle .column {
+    margin-bottom: 20px;
+  }
+}
+.footer .footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+}
+.footer .footer-bottom p {
+  margin: 5px 0;
+}
+.footer .footer-bottom .footer-links {
+  margin-bottom: 15px;
+}
+.footer .footer-bottom .footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-bottom .footer-links a:hover {
+  text-decoration: underline;
+}
+.footer .footer-bottom .social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .footer-bottom .social-icons a .fa-brands {
+  color: #fff;
+  font-size: 2rem;
+  margin: 10px;
+}
+@media (max-width: 480px) {
+  .footer .footer-bottom .social-icons a .fa-brands {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
+  .footer .footer-top h2 {
+    font-size: 20px;
+  }
+  .footer .footer-top p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .footer .footer-top h2 {
+    font-size: 18px;
+  }
+  .footer .footer-top p {
+    font-size: 12px;
+  }
 }
 
 * {
